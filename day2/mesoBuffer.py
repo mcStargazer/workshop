@@ -13,7 +13,7 @@ import arcpy
 
 ###############################################################################
 ##### environment settings
-arcpy.env.workspace = "c:/pyWork/countyChaos"
+arcpy.env.workspace = "c:/pyWork/day2/countyChaos"
 arcpy.env.overwriteOutput = True
 
 buffers = ["20 Kilometers", "30 Kilometers"]
@@ -23,8 +23,8 @@ for distanceField in buffers:
     ##### geoprocessing: buffer
     # resources.arcgis.com/en/help/main/10.1/index.html#//000800000019000000
     print "Working on buffer...\n"
-    inFile = "c:/pyWork/countyChaos/mesonet.shp"
-    outFileBuffer = "c:/pyWork/countyChaos/mesonet_buffer%s.shp" % (postfix,)
+    inFile = "c:/pyWork/day2/countyChaos/mesonet.shp"
+    outFileBuffer = "c:/pyWork/day2/countyChaos/mesonet_buffer%s.shp" % (postfix,)
     # distanceField = "30 Kilometers"
     sideType = "FULL"
     endType = "ROUND"
@@ -36,9 +36,9 @@ for distanceField in buffers:
     ##### geoprocessing: erase
     # resources.arcgis.com/en/help/main/10.1/index.html#//00080000000m000000
     print "Working on erase...\n"
-    inFileToBeErased = "c:/pyWork/countyChaos/Oklahoma.shp"
-    inFileEraser = "c:/pyWork/countyChaos/mesonet_buffer%s.shp" % (postfix,)
-    outFileErase = "c:/pyWork/countyChaos/distantLands_%skm.shp" % (postfix,)
+    inFileToBeErased = "c:/pyWork/day2/countyChaos/Oklahoma.shp"
+    inFileEraser = "c:/pyWork/day2/countyChaos/mesonet_buffer%s.shp" % (postfix,)
+    outFileErase = "c:/pyWork/day2/countyChaos/distantLands_%skm.shp" % (postfix,)
     xyTol = "1 Meters"
     arcpy.Erase_analysis(inFileToBeErased, inFileEraser, outFileErase, xyTol)
 

@@ -1,0 +1,16 @@
+failure message(s) with time stamp: Tue Jan 26 13:00:54 2016
+PYTHON ERRORS:
+Traceback Info:
+  File "C:\pyWork\day2\mesoBuffWithError.py", line 40, in <module>
+    endType, dissolveType, dissolveField)
+
+Error Info:
+Failed to execute. Parameters are not valid.
+ERROR 000725: Output Feature Class: Dataset c:\pyWork\day2\countyChaos\mesonet_buffer20.shp already exists.
+Failed to execute (Buffer).
+
+ARCPY ERRORS:
+Failed to execute. Parameters are not valid.
+ERROR 000725: Output Feature Class: Dataset c:\pyWork\day2\countyChaos\mesonet_buffer20.shp already exists.
+Failed to execute (Buffer).
+
